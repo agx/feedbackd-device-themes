@@ -1,4 +1,4 @@
-project('feedbackd-device-themes', 'c',
+project('feedbackd-device-themes',
           version : '0.0.0',
           license : 'LGPLv3+',
     meson_version : '>= 0.49.0',
