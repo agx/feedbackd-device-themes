@@ -1,0 +1,71 @@
+{
+  "name" : "default",
+  "profiles" : [
+    {
+      "name" : "quiet",
+      "feedbacks" : [
+        {
+          "event-name" : "bell-terminal",
+          "type"       : "VibraRumble",
+          "duration"   : 100
+        },
+        {
+          "event-name" : "button-pressed",
+          "type"       : "VibraRumble",
+          "duration"   : 30
+        },
+        {
+          "event-name" : "button-released",
+          "type"       : "VibraRumble",
+          "duration"   : 20
+        },
+        {
+          "event-name" : "message-new-email",
+          "type"       : "VibraRumble",
+          "duration"   : 750,
+          "count"      : 3,
+          "pause"      : 100
+        },
+        {
+          "event-name" : "message-new-instant",
+          "type"       : "VibraRumble",
+          "duration"   : 750
+        },
+        {
+          "event-name" : "message-new-sms",
+          "type"       : "VibraRumble",
+          "duration"   : 1250,
+          "count"      : 2,
+          "pause"      : 250
+        },
+        {
+          "event-name" : "message-sent-instant",
+          "type"       : "VibraRumble",
+          "duration"   : 250
+        },
+        {
+          "event-name" : "phone-incoming-call",
+          "type"       : "VibraPeriodic",
+          "duration"   : 10000
+        },
+        {
+          "event-name" : "timeout-completed",
+          "type"       : "VibraRumble",
+          "duration"   : 500
+        },
+        {
+          "event-name" : "theme-demo",
+          "type"       : "VibraPeriodic",
+          "magnitude"  : 32767,
+          "duration"   : 5000
+        },
+        {
+          "event-name" : "window-close",
+          "type"       : "VibraRumble",
+          "duration"   : 60
+        }
+      ]
+    }
+  ]
+}
+
