@@ -1,4 +1,11 @@
-theme_json = ['pine64,pinephone.json', 'purism,librem5.json']
+theme_json = [
+  'oneplus,enchilada.json',
+  'oneplus,fajita.json',
+  'pine64,pinephone.json',
+  'purism,librem5.json',
+  'xiaomi,beryllium.json',
+]
+
 install_data(
   theme_json,
   install_dir: feedbackd_theme_dir,
