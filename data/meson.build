@@ -2,6 +2,7 @@ theme_json = [
   'oneplus,enchilada.json',
   'oneplus,fajita.json',
   'pine64,pinephone.json',
+  'pine64,pinephone-pro.json',
   'purism,librem5.json',
   'xiaomi,beryllium.json',
 ]
