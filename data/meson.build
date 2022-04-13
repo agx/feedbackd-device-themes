@@ -4,6 +4,7 @@ theme_json = [
   'pine64,pinephone.json',
   'pine64,pinephone-pro.json',
   'purism,librem5.json',
+  'samsung,midas.json',
   'xiaomi,beryllium.json',
 ]
 
