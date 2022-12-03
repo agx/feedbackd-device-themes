@@ -79,36 +79,6 @@
       "name" : "silent",
       "feedbacks" : [
         {
-          "event-name" : "battery-caution",
-          "type"       : "Led",
-          "color"      : "red",
-          "frequency"  : 5000
-        },
-        {
-          "event-name" : "phone-missed-call",
-          "type"       : "Led",
-          "color"      : "blue",
-          "frequency"  : 3000
-        },
-        {
-          "event-name" : "message-missed-email",
-          "type"       : "Led",
-          "color"      : "blue",
-          "frequency"  : 2000
-        },
-        {
-          "event-name" : "message-missed-instant",
-          "type"       : "Led",
-          "color"      : "blue",
-          "frequency"  : 1000
-        },
-        {
-          "event-name" : "message-missed-notification",
-          "type"       : "Led",
-          "color"      : "blue",
-          "frequency"  : 500
-        },
-        {
           "event-name" : "message-missed-sms",
           "type"       : "Led",
           "color"      : "green",
