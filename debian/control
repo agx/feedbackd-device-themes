@@ -1,0 +1,30 @@
+Source: feedbackd-device-themes
+Section: admin
+Priority: optional
+Maintainer: Guido Günther <agx@sigxcpu.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ json-glib-tools,
+ meson,
+Standards-Version: 4.6.0
+Homepage: https://source.puri.sm/Librem5/feedbackd-device-themes
+Rules-Requires-Root: no
+
+Package: feedbackd-device-themes
+Architecture: all
+Depends:
+ ${misc:Depends},
+Recommends:
+ feedbackd (>= 0.0.0+git20210125),
+Description: Device specific themes for Feedbackd
+ Feedbackd is a DBus activated daemon that provides haptic/
+ visual/audio feedback based on events.
+ .
+ This package contains device-specific feedback theme files.
+ Currently supported devices include:
+   * Pine64 PinePhone
+   * Pine64 PinePhone Pro
+   * Purism Librem 5
+   * OnePlus 6/6T
+   * Samsuns Galaxy S
+   * Xiaomi Pocophone F1
