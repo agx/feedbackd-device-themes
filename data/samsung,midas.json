@@ -1,61 +1,7 @@
 {
-  "name" : "default",
+  "name" : "$device",
+  "parent-name": "default",
   "profiles" : [
-    {
-      "name" : "full",
-      "feedbacks" : [
-        {
-          "event-name" : "alarm-clock-elapsed",
-          "type"       : "Sound",
-          "effect"     : "alarm-clock-elapsed"
-        },
-        {
-          "event-name" : "button-pressed",
-          "type"       : "Sound",
-          "effect"     : "button-pressed"
-        },
-        {
-          "event-name" : "button-released",
-          "type"       : "Sound",
-          "effect"     : "button-released"
-        },
-        {
-          "event-name" : "message-new-email",
-          "type"       : "Sound",
-          "effect"     : "message-new-email"
-        },
-        {
-          "event-name" : "message-new-instant",
-          "type"       : "Sound",
-          "effect"     : "message-new-instant"
-        },
-        {
-          "event-name" : "message-new-sms",
-          "type"       : "Sound",
-          "effect"     : "message-new-instant"
-        },
-        {
-          "event-name" : "phone-incoming-call",
-          "type"       : "Sound",
-          "effect"     : "phone-incoming-call"
-        },
-        {
-          "event-name" : "timeout-completed",
-          "type"       : "Sound",
-          "effect"     : "complete"
-        },
-        {
-          "event-name" : "theme-demo",
-          "type"       : "Sound",
-          "effect"     : "theme-demo"
-        },
-        {
-          "event-name" : "window-close",
-          "type"       : "Sound",
-          "effect"     : "theme-demo"
-        }
-      ]
-    },
     {
       "name" : "quiet",
       "feedbacks" : [
