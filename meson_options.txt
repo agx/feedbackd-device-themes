@@ -1,0 +1,3 @@
+option('validate',
+       type: 'feature', value: 'auto',
+       description: 'Whether to validate the themes')
