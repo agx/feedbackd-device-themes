@@ -6,27 +6,58 @@ stages:
  - test
  - package
 
-variables:
-  DEPS: meson json-glib-tools
+.before_script: &before_script
+  before_script:
+    - export DEBIAN_FRONTEND=noninteractive
+    - apt-get -y update
+    - apt-get -y build-dep .
 
-before_script:
-  - export DEBIAN_FRONTEND=noninteractive
-  - apt-get -y update
-  - apt-get -y install $DEPS
+.image: &image
+  image:
+    name: debian:bookworm
 
 .tags: &tags
   tags:
-    - librem5
+    - librem5:arm64
 
-build:native-debian-bullseye:
+build:native-debian-bookworm:
   <<: *tags
-  image: debian:bullseye
+  <<: *image
+  <<: *before_script
+  stage: build
   artifacts:
     paths:
       - _build
   script:
-    - meson --werror . _build
-    - ninja -C _build
+    - meson --werror _build
+    - meson compile -C _build
+  except:
+    variables:
+      - $PKG_ONLY == "1"
+
+test:native-debian-bookworm:
+  <<: *tags
+  <<: *image
+# Just until newer feedbackd is in the archive:
+  before_script:
+    - export DEBIAN_FRONTEND=noninteractive
+    - apt-get -y update
+    - apt-get -y build-dep .
+    - apt install -y feedbackd unzip wget
+    - mkdir dl
+    - cd dl
+    - wget https://source.puri.sm/guido.gunther/feedbackd/-/jobs/403030/artifacts/download
+    - unzip download
+    - cd debian/output
+    - rm *dbgsym*.deb gir*.deb *-dev*.deb
+    - dpkg -i feedbackd*.deb libfeedback*.deb
+    - cd ../../..
+  stage: test
+  needs:
+    - build:native-debian-bookworm
+  script:
+    - meson -Dvalidate=enabled _build
+    - meson test -v --print-errorlogs -C _build
   except:
     variables:
       - $PKG_ONLY == "1"
