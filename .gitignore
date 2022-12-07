@@ -1,0 +1,8 @@
+_build/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/feedbackd-device-themes.debhelper.log
+debian/feedbackd-device-themes.substvars
+debian/feedbackd-device-themes/
+debian/files
+debian/tmp/
