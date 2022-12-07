@@ -6,18 +6,24 @@ stages:
  - test
  - package
 
-before_script:
-  - export DEBIAN_FRONTEND=noninteractive
-  - apt-get -y update
-  - apt-get -y build-dep .
+.before_script: &before_script
+  before_script:
+    - export DEBIAN_FRONTEND=noninteractive
+    - apt-get -y update
+    - apt-get -y build-dep .
+
+.image: &image
+  image:
+    name: debian:bookworm
 
 .tags: &tags
   tags:
-    - librem5
+    - librem5:arm64
 
-build:native-debian-bullseye:
+build:native-debian-bookworm:
   <<: *tags
-  image: debian:bullseye
+  <<: *image
+  <<: *before_script
   artifacts:
     paths:
       - _build
