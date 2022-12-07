@@ -22,10 +22,21 @@ This validates the contained themes:
 
 ```sh
 meson . _build
-ninja -C _build
+meson test -v -C _build
 ```
 
 If you don't want to install the themes you can test a specific theme
 using feedbackd's `FEEDBACK_THEME` environment variable.
 
+## Adding a new theme
+Steps for adding a new theme
+
+- Add the theme itself to [data/] after performing the above validation.
+  Make sure to chain up to the parent theme.
+- Mention your device in [debian/control][]
+- Update the copyright in [debian/copyright][]
+- Submit a merge request to https://source.puri.sm/Librem5/feedbackd-device-themes
+
 [feedbackd]: https://source.puri.sm/Librem5/feedbackd
+[debian/control]: https://source.puri.sm/Librem5/feedbackd-device-themes/-/blob/main/debian/control#L24
+[debian/copyright]: https://source.puri.sm/Librem5/feedbackd-device-themes/-/blob/main/debian/copyright#L11
