@@ -15,7 +15,7 @@ Themes are licensed under the GPLv3+.
 git clone https://source.puri.sm/Librem5/feedbackd-device-themes
 cd feedbackd-device-themes
 ```
-The master branch has the current development version.
+The `main` branch has the current development version.
 
 ## Building
 This validates the contained themes:
