@@ -6,13 +6,10 @@ stages:
  - test
  - package
 
-variables:
-  DEPS: meson json-glib-tools
-
 before_script:
   - export DEBIAN_FRONTEND=noninteractive
   - apt-get -y update
-  - apt-get -y install $DEPS
+  - apt-get -y build-dep .
 
 .tags: &tags
   tags:
