@@ -1,31 +1,17 @@
-Device specific feedback themes for Feedbackd
-=============================================
+# Phosh
 
-[feedbackd][] provides a DBus daemon (feedbackd) to act on events to provide
-haptic, visual and audio feedback. This repository contains the device
-specific feedback theme files.
-
-## License
-
-Themes are licensed under the GPLv3+.
-
-## Getting the source
-
+All development now happens on the `main` branch. To update your local checkout
+to use that branch:
 ```sh
-git clone https://source.puri.sm/Librem5/feedbackd-device-themes
-cd feedbackd-device-themes
-```
-The master branch has the current development version.
-
-## Building
-This validates the contained themes:
-
-```sh
-meson . _build
-ninja -C _build
+git checkout master
+git branch -m master main
+git fetch
+git branch --unset-upstream
+git branch -u origin/main
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 ```
 
-If you don't want to install the themes you can test a specific theme
-using feedbackd's `FEEDBACK_THEME` environment variable.
+This branch is kept around to avoid breaking build tooling that requires a
+pinned commit hash to be on the `master` branch unless otherwise specified. See
+https://github.com/ostreedev/ostree/issues/2360 for details.
 
-[feedbackd]: https://source.puri.sm/Librem5/feedbackd
