@@ -1,5 +1,6 @@
 {
-  "name" : "default",
+  "name" : "$device",
+  "parent-name": "default",
   "profiles" : [
     {
       "name" : "quiet",
