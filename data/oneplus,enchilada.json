@@ -1,14 +1,10 @@
 {
-  "name" : "default",
+  "name" : "$device",
+  "parent-name": "default",
   "profiles" : [
     {
       "name" : "quiet",
       "feedbacks" : [
-        {
-          "event-name" : "bell-terminal",
-          "type"       : "VibraRumble",
-          "duration"   : 100
-        },
         {
           "event-name" : "button-pressed",
           "type"       : "VibraRumble",
@@ -18,13 +14,6 @@
           "event-name" : "button-released",
           "type"       : "VibraRumble",
           "duration"   : 20
-        },
-        {
-          "event-name" : "message-new-email",
-          "type"       : "VibraRumble",
-          "duration"   : 750,
-          "count"      : 3,
-          "pause"      : 100
         },
         {
           "event-name" : "message-new-instant",
@@ -44,20 +33,9 @@
           "duration"   : 250
         },
         {
-          "event-name" : "phone-incoming-call",
-          "type"       : "VibraPeriodic",
-          "duration"   : 10000
-        },
-        {
           "event-name" : "timeout-completed",
           "type"       : "VibraRumble",
           "duration"   : 500
-        },
-        {
-          "event-name" : "theme-demo",
-          "type"       : "VibraPeriodic",
-          "magnitude"  : 32767,
-          "duration"   : 5000
         },
         {
           "event-name" : "window-close",
