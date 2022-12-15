@@ -1,3 +1,33 @@
+feedbackd-device-themes (0.0.2200) experimental; urgency=medium
+
+  * Don't mind the version number. It's supposed to be 0.0.2 but we want
+    a number greater than the snapshot based ones. It will fix itself with
+    the 0.1.0 release.
+  * build: gitignore common files
+  * ci: Validate themes
+  * librem5: Just chain up to the default theme
+  * samsung,midas: Chain up to default theme.
+    This allows us to reuse the whole "full" profile
+  * samsung,midas: Overide sms silent event.
+    It uses a different led color
+  * pinephone: Chain up to default theme.
+    This allows us to reuse the whole "full" and "silent" profile
+  * pinephone: Drop events from 'quiet' profile that match the default theme
+  * pinephone-pro: Chain up to default theme.
+    This allows us to reuse the whole "sound" profile
+  * pinephone-pro: Drop events from 'quiet' profile that match the default
+    theme
+  * shift: Chain up to default theme.
+    This allows us to reuse the whole "full" and "silent" profile
+  * shift: Drop events from 'quiet' profile that match the default theme
+  * README: Add steps to add a new theme
+  * oneplus6: Chain up to default theme.
+    Thanks Federico Amedeo Izzo for reporting this.
+    Closes: https://source.puri.sm/Librem5/feedbackd-device-themes/-/issues/4
+  * oneplus6: Drop events from 'quiet' profile that match the default theme
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 15 Dec 2022 11:47:19 +0100
+
 feedbackd-device-themes (0.0.20220523-1) unstable; urgency=medium
 
   * New upstream version
