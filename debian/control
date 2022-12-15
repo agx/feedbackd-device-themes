@@ -15,7 +15,7 @@ Architecture: all
 Depends:
  ${misc:Depends},
 Recommends:
- feedbackd (>= 0.0.0+git20210125),
+ feedbackd (>= 0.0.2),
 Description: Device specific themes for Feedbackd
  Feedbackd is a DBus activated daemon that provides haptic/
  visual/audio feedback based on events.
