@@ -1,3 +1,10 @@
+0.0.2
+-----
+Released December 2022
+* This requires feedbackd >= 0.0.2
+* Improve ci
+* Minimize themes by chaining up to the default theme
+
 Git snapshot 0.0.20220523
 -------------------------
 Released May 2022
