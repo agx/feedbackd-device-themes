@@ -23,9 +23,10 @@ Description: Device specific themes for Feedbackd
  .
  This package contains device-specific feedback theme files.
  Currently supported devices include:
+   * OnePlus 6/6T
    * Pine64 PinePhone
    * Pine64 PinePhone Pro
    * Purism Librem 5
-   * OnePlus 6/6T
    * Samsuns Galaxy S
+   * SHIFT SHIFT6mq
    * Xiaomi Pocophone F1
