@@ -1,4 +1,4 @@
-feedbackd-device-themes (0.0.2200) experimental; urgency=medium
+feedbackd-device-themes (0.0.r2) experimental; urgency=medium
 
   * Don't mind the version number. It's supposed to be 0.0.2 but we want
     a number greater than the snapshot based ones. It will fix itself with
