@@ -8,6 +8,8 @@ stages:
 
 .before_script: &before_script
   before_script:
+    # Until feedbackd 0.0.2 migrated
+    - echo "deb http://deb.debian.org/debian unstable main" >> /etc/apt/sources.list.d/sid.list
     - export DEBIAN_FRONTEND=noninteractive
     - apt-get -y update
     - apt-get -y build-dep .
@@ -38,20 +40,7 @@ build:native-debian-bookworm:
 test:native-debian-bookworm:
   <<: *tags
   <<: *image
-# Just until newer feedbackd is in the archive:
-  before_script:
-    - export DEBIAN_FRONTEND=noninteractive
-    - apt-get -y update
-    - apt-get -y build-dep .
-    - apt install -y feedbackd unzip wget
-    - mkdir dl
-    - cd dl
-    - wget https://source.puri.sm/guido.gunther/feedbackd/-/jobs/403030/artifacts/download
-    - unzip download
-    - cd debian/output
-    - rm *dbgsym*.deb gir*.deb *-dev*.deb
-    - dpkg -i feedbackd*.deb libfeedback*.deb
-    - cd ../../..
+  <<: *before_script
   stage: test
   needs:
     - build:native-debian-bookworm
@@ -65,6 +54,8 @@ test:native-debian-bookworm:
 package:deb-pureos-byzantium:arm64:
   variables:
     L5_DOCKER_IMAGE: pureos/byzantium
+    DEB_BUILD_OPTIONS: nocheck
+    DEB_BUILD_PROFILES: nocheck
   extends: .l5-build-debian-package
   tags:
     - librem5:arm64
