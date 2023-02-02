@@ -1,3 +1,27 @@
+feedbackd-device-themes (0.0.r3) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * ci: Use packaged feedbackd 0.0.2.
+    Avoid the hard coded download URL. We can drop sid once fbd migrated.
+  * d/control: Mark feedbackd build-dep as only needed for tests
+  * ci: Mark PureOS build as nocheck.
+    We can drop this once PureOS gets fbd 0.0.2
+  * d/control: Sort devices alphabetically.
+    Add shift6mq while at that.
+
+  [ Federico Amedeo Izzo ]
+  * oneplus6: Drop 'quiet' profile to use default behaviour.
+    The default profiles vibration settings are closer to the Android
+    behaviour than the 'quiet' custom profile.
+    See discussion on #4
+  * oneplus6t: Drop custom profile, chain up default theme.
+    The default profiles vibration settings are closer to the Android
+    behaviour than the custom theme.  The same approach of OnePlus 6 is
+    applied to OnePlus 6T as the two phones are similar.
+    See discussion on #4
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 02 Feb 2023 13:43:12 +0100
+
 feedbackd-device-themes (0.0.r2) experimental; urgency=medium
 
   * Don't mind the version number. It's supposed to be 0.0.2 but we want
