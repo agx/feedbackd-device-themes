@@ -1,5 +1,5 @@
 project('feedbackd-device-themes',
-          version : '0.0.2',
+          version : '0.0.3',
           license : 'GPLv3+',
     meson_version : '>= 0.49.0',
   default_options : [
