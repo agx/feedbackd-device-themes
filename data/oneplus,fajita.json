@@ -1,5 +1,53 @@
 {
   "name" : "$device",
-  "parent-name": "default"
+  "parent-name": "default",
+  "profiles" : [
+    {
+      "name" : "silent",
+      "feedbacks" : [
+        {
+          "event-name" : "battery-caution",
+          "type"       : "Led",
+          "color"      : "white",
+          "frequency"  : 5000,
+          "max-brightness" : 1
+        },
+        {
+          "event-name" : "phone-missed-call",
+          "type"       : "Led",
+          "color"      : "white",
+          "frequency"  : 3000,
+          "max-brightness" : 1
+        },
+        {
+          "event-name" : "message-missed-email",
+          "type"       : "Led",
+          "color"      : "white",
+          "frequency"  : 2000,
+          "max-brightness" : 1
+        },
+        {
+          "event-name" : "message-missed-instant",
+          "type"       : "Led",
+          "color"      : "white",
+          "frequency"  : 1000,
+          "max-brightness" : 1
+        },
+        {
+          "event-name" : "message-missed-notification",
+          "type"       : "Led",
+          "color"      : "white",
+          "frequency"  : 500,
+          "max-brightness" : 1
+        },
+        {
+          "event-name" : "message-missed-sms",
+          "type"       : "Led",
+          "color"      : "white",
+          "frequency"  : 2000,
+          "max-brightness" : 1
+        }
+      ]
+    }
+  ]
 }
-
