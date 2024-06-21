@@ -1,13 +1,21 @@
-0.1.0
------
+feedbackd-device-themes 0.4.0
+-----------------------------
+Released June 2024
+* Lower LED brightness for OnePlus 6T
+* Sync version number with feedbackd
+* Contributors:
+    * Guido Günther
+
+feedbackd-device-themes 0.1.0
+-----------------------------
 Released February 2023
 * Minimize theme for Xiaomi POCOPHONE F1
 * Contributors:
     * Dylan Van Assche
     * Guido Günther
 
-0.0.3
------
+feedbackd-device-themes 0.0.3
+-----------------------------
 Released February 2023
 * Use default `quiet` profile on OnePlus 6/6T
 * Simplify CI
@@ -15,8 +23,8 @@ Released February 2023
     * Federico Amedeo Izzo
     * Guido Günther
 
-0.0.2
------
+feedbackd-device-themes 0.0.2
+-----------------------------
 Released December 2022
 * This requires feedbackd >= 0.0.2
 * Improve ci
