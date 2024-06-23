@@ -1,3 +1,11 @@
+feedbackd-device-themes (0.4.0) experimental; urgency=medium
+
+  * oneplus,fajita: Add LED events with reduced brightness.
+    The LEDs max brightness is way too high, use 1% of it to for feedback in
+    the silent profile.
+
+ -- Guido Günther <agx@sigxcpu.org>  Fri, 21 Jun 2024 22:21:06 +0200
+
 feedbackd-device-themes (0.1.0) experimental; urgency=medium
 
   [ Guido Günther ]
