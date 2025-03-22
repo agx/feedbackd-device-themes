@@ -1,3 +1,9 @@
+feedbackd-device-themes (0.8.0) experimental; urgency=medium
+
+  * oneplus,fajita: Use more nuanced feedback for calls
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 22 Mar 2025 14:05:12 +0100
+
 feedbackd-device-themes (0.4.0) experimental; urgency=medium
 
   * oneplus,fajita: Add LED events with reduced brightness.
@@ -57,7 +63,7 @@ feedbackd-device-themes (0.0.r2) experimental; urgency=medium
   * librem5: Just chain up to the default theme
   * samsung,midas: Chain up to default theme.
     This allows us to reuse the whole "full" profile
-  * samsung,midas: Overide sms silent event.
+  * samsung,midas: Override sms silent event.
     It uses a different led color
   * pinephone: Chain up to default theme.
     This allows us to reuse the whole "full" and "silent" profile
