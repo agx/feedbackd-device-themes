@@ -1,3 +1,7 @@
+---
+include:
+  - remote: 'https://gitlab.gnome.org/guidog/meta-phosh/-/raw/0ed15edd821f8afacbf7a9c0f2a6266873289115/ci/phosh-common-jobs.yml'
+
 stages:
  - build
  - test
