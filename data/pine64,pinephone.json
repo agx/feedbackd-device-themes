@@ -6,14 +6,6 @@
       "name" : "quiet",
       "feedbacks" : [
         {
-          "event-name"   : "alarm-clock-elapsed",
-          "type"         : "VibraPeriodic",
-          "magnitude"    : 32767,
-          "duration"     : 10000,
-          "fade-in-time" : 10000,
-          "fade-in-level": 4096
-        },
-        {
           "event-name" : "bell-terminal",
           "type"       : "VibraRumble",
           "duration"   : 100

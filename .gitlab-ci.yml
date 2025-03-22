@@ -1,9 +1,11 @@
+---
 include:
- - remote: 'https://source.puri.sm/Librem5/librem5-ci/raw/master/librem5-pipeline-definitions.yml'
+  - remote: 'https://gitlab.gnome.org/guidog/meta-phosh/-/raw/0ed15edd821f8afacbf7a9c0f2a6266873289115/ci/phosh-common-jobs.yml'
 
 stages:
  - build
  - test
+ - style-checks
  - package
 
 .before_script: &before_script
@@ -16,13 +18,13 @@ stages:
 
 .image: &image
   image:
-    name: debian:bookworm
+    name: debian:trixie
 
 .tags: &tags
   tags:
-    - librem5:arm64
+    - librem5
 
-build:native-debian-bookworm:
+build:native-debian-trixie:
   <<: *tags
   <<: *image
   <<: *before_script
@@ -37,13 +39,13 @@ build:native-debian-bookworm:
     variables:
       - $PKG_ONLY == "1"
 
-test:native-debian-bookworm:
+test:native-debian-trixie:
   <<: *tags
   <<: *image
   <<: *before_script
   stage: test
   needs:
-    - build:native-debian-bookworm
+    - build:native-debian-trixie
   script:
     - meson -Dvalidate=enabled --wipe _build
     - meson test -v --print-errorlogs -C _build
@@ -51,11 +53,13 @@ test:native-debian-bookworm:
     variables:
       - $PKG_ONLY == "1"
 
-package:deb-pureos-byzantium:arm64:
-  variables:
-    L5_DOCKER_IMAGE: pureos/byzantium
-    DEB_BUILD_OPTIONS: nocheck
-    DEB_BUILD_PROFILES: nocheck
-  extends: .l5-build-debian-package
-  tags:
-    - librem5:arm64
+check-consistency:
+  <<: *tags
+  stage: test
+  extends: .phosh-check-consistency
+
+check-meson:
+  <<: *tags
+  stage: style-checks
+  extends:
+    - .phosh-check-meson
