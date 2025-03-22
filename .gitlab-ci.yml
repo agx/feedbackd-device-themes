@@ -1,6 +1,3 @@
-include:
- - remote: 'https://source.puri.sm/Librem5/librem5-ci/raw/master/librem5-pipeline-definitions.yml'
-
 stages:
  - build
  - test
@@ -51,11 +48,3 @@ test:native-debian-trixie:
     variables:
       - $PKG_ONLY == "1"
 
-package:deb-pureos-byzantium:arm64:
-  variables:
-    L5_DOCKER_IMAGE: pureos/byzantium
-    DEB_BUILD_OPTIONS: nocheck
-    DEB_BUILD_PROFILES: nocheck
-  extends: .l5-build-debian-package
-  tags:
-    - librem5:arm64
