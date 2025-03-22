@@ -6,14 +6,6 @@
       "name" : "quiet",
       "feedbacks" : [
         {
-          "event-name"   : "alarm-clock-elapsed",
-          "type"         : "VibraPeriodic",
-          "magnitude"    : 32767,
-          "duration"     : 10000,
-          "fade-in-time" : 10000,
-          "fade-in-level": 4096
-        },
-        {
           "event-name" : "bell-terminal",
           "type"       : "VibraRumble",
           "duration"   : 75
@@ -53,20 +45,9 @@
           "duration"   : 250
         },
         {
-          "event-name" : "phone-incoming-call",
-          "type"       : "VibraPeriodic",
-          "duration"   : 10000
-        },
-        {
           "event-name" : "timeout-completed",
           "type"       : "VibraRumble",
           "duration"   : 500
-        },
-        {
-          "event-name" : "theme-demo",
-          "type"       : "VibraPeriodic",
-          "magnitude"  : 32767,
-          "duration"   : 5000
         },
         {
           "event-name" : "window-close",
