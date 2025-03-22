@@ -22,7 +22,7 @@ stages:
 
 .tags: &tags
   tags:
-    - librem5:arm64
+    - librem5
 
 build:native-debian-trixie:
   <<: *tags
