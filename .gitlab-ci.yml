@@ -5,6 +5,7 @@ include:
 stages:
  - build
  - test
+ - style-checks
  - package
 
 .before_script: &before_script
@@ -52,3 +53,13 @@ test:native-debian-trixie:
     variables:
       - $PKG_ONLY == "1"
 
+check-consistency:
+  <<: *tags
+  stage: test
+  extends: .phosh-check-consistency
+
+check-meson:
+  <<: *tags
+  stage: style-checks
+  extends:
+    - .phosh-check-meson
