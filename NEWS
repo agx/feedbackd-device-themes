@@ -1,3 +1,10 @@
+feedbackd-device-themes 0.8.1
+-----------------------------
+Released March 2025
+* Drop needless `VibraPeriodic` duplicated from the default theme
+* Contributors:
+    * Guido Günther
+
 feedbackd-device-themes 0.8.0
 -----------------------------
 Released März 2025
