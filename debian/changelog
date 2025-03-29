@@ -1,3 +1,16 @@
+feedbackd-device-themes (0.8.1) experimental; urgency=medium
+
+  * treewide: Format meson files
+  * ci: Switch to trixie
+  * ci: Drop byzantium package build
+  * ci: Update shared scripts and dot files to a9fef9a
+  * ci: Check consistency and meson format
+  * data: Remove VibraPeriodic from device themes.
+    They were merely replicating the defaults from the default theme.
+  * ci: Use librem5 tag. No need for an arm64 runner
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 29 Mar 2025 10:11:21 +0100
+
 feedbackd-device-themes (0.8.0) experimental; urgency=medium
 
   * oneplus,fajita: Use more nuanced feedback for calls
