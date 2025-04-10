@@ -1,3 +1,11 @@
+feedbackd-device-themes 0.8.2
+-----------------------------
+Released April 2025
+* Enhance `button-press` feedback for Google Sargo and Purism Librem5
+* Contributors:
+    * Chris Talbot
+    * Guido Günther
+
 feedbackd-device-themes 0.8.1
 -----------------------------
 Released March 2025

@@ -1,3 +1,14 @@
+feedbackd-device-themes (0.8.2) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * data: Add google sargo.
+    The default button press event is too weak so bump it to 0.4.
+
+  [ Chris Talbot ]
+  * purism,librem5.json: make VibraPattern stronger
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 09 Apr 2025 10:09:53 +0200
+
 feedbackd-device-themes (0.8.1) experimental; urgency=medium
 
   * treewide: Format meson files
