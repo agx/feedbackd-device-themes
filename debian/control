@@ -8,7 +8,7 @@ Build-Depends:
  json-glib-tools,
  meson,
 Standards-Version: 4.6.0
-Homepage: https://source.puri.sm/Librem5/feedbackd-device-themes
+Homepage: https://gitlab.freedesktop.org/agx/feedbackd-device-themes
 Rules-Requires-Root: no
 
 Package: feedbackd-device-themes
