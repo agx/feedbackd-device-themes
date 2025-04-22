@@ -3,6 +3,17 @@
   "parent-name": "default",
   "profiles" : [
     {
+      "name" : "quiet",
+      "feedbacks" : [
+        {
+          "event-name" : "phone-incoming-call",
+          "type"       : "VibraPattern",
+          "magnitudes" : [ 0.2, 0.0 ],
+          "durations"  : [ 500, 500 ]
+        }
+      ]
+    },
+    {
       "name" : "silent",
       "feedbacks" : [
         {
@@ -46,17 +57,6 @@
           "color"      : "white",
           "frequency"  : 2000,
           "max-brightness" : 1
-        }
-      ]
-    },
-    {
-      "name" : "quiet",
-      "feedbacks" : [
-        {
-          "event-name" : "phone-incoming-call",
-          "type"       : "VibraPattern",
-          "magnitudes" : [ 0.2, 0.0 ],
-          "durations"  : [ 500, 500 ]
         }
       ]
     }
