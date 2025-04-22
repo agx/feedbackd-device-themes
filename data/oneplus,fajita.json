@@ -57,6 +57,13 @@
           "color"      : "white",
           "frequency"  : 2000,
           "max-brightness" : 1
+        },
+        {
+          "event-name" : "notification-missed-generic",
+          "type"       : "Led",
+          "color"      : "white",
+          "frequency"  : 500,
+          "max-brightness" : 1
         }
       ]
     }
