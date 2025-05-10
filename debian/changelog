@@ -1,3 +1,16 @@
+feedbackd-device-themes (0.8.3) experimental; urgency=medium
+
+  * ci: Drop tags. Not needed on fdo
+  * treewide: Update for new repo location. Cleanup markdown a bit while at that
+  * ci: Check commit logs. Similar to what we do in feedbackd
+  * oneplus,fajita: Move quiet profile before silent.
+    Let's keep the same ordering as in the default theme.
+  * oneplus,fajita: Add override for notification-missed-generic.
+    This replaces message-missed-notification. We keep the deprecated for
+    the moment.
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 10 May 2025 10:47:11 +0200
+
 feedbackd-device-themes (0.8.2) experimental; urgency=medium
 
   [ Guido Günther ]
