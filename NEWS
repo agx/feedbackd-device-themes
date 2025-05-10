@@ -1,3 +1,10 @@
+feedbackd-device-themes 0.8.3
+-----------------------------
+Released May 2025
+* oneplus,fajita: Add override for notification-missed-generic
+* Contributors:
+    * Guido Günther
+
 feedbackd-device-themes 0.8.2
 -----------------------------
 Released April 2025
