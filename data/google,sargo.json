@@ -6,10 +6,10 @@
       "name" : "quiet",
       "feedbacks" : [
         {
-          "event-name" : "button-press-event",
+          "event-name" : "button-pressed",
           "type"       : "VibraPattern",
-          "magnitudes" : [ 0.4 ],
-          "durations"  : [ 7 ]
+          "magnitudes" : [ 0.5 ],
+          "durations"  : [ 15 ]
         }
       ]
     }

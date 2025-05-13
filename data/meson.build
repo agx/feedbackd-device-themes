@@ -1,4 +1,5 @@
 theme_json = [
+  'google,sargo.json',
   'oneplus,enchilada.json',
   'oneplus,fajita.json',
   'pine64,pinephone.json',
