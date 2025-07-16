@@ -16,6 +16,16 @@
           "duration"   : 11
         },
         {
+          "event-name" : "key-pressed",
+          "type"       : "VibraRumble",
+          "duration"   : 13
+        },
+        {
+          "event-name" : "key-released",
+          "type"       : "VibraRumble",
+          "duration"   : 11
+        },
+        {
           "event-name" : "window-close",
           "type"       : "VibraRumble",
           "duration"   : 20

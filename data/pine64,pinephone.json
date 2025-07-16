@@ -21,6 +21,16 @@
           "duration"   : 40
         },
         {
+          "event-name" : "key-pressed",
+          "type"       : "VibraRumble",
+          "duration"   : 80
+        },
+        {
+          "event-name" : "key-released",
+          "type"       : "VibraRumble",
+          "duration"   : 40
+        },
+        {
           "event-name" : "message-new-instant",
           "type"       : "VibraRumble",
           "duration"   : 750
@@ -51,4 +61,3 @@
     }
   ]
 }
-
